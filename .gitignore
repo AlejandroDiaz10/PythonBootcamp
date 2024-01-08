@@ -1,0 +1,21 @@
+# Generated files and directories
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environment
+/env/
+
+# IDE-specific configuration files
+.vscode/
+.idea/
+
+# Log and output files
+*.log
+*.out
+*.err
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db
