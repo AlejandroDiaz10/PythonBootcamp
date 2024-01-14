@@ -17,11 +17,17 @@ class Snake:
     # Create the snake body (with 3 squares - 20x20)
     def create_snake(self):
         for position in INITIAL_POSITIONS:
-            new_turtle = Turtle("square")
-            new_turtle.color("white")
-            new_turtle.penup()
-            new_turtle.goto(position)
-            self.snake.append(new_turtle)
+            self.add_segment(position)
+
+    def add_segment(self, position):
+        new_turtle = Turtle("square")
+        new_turtle.color("white")
+        new_turtle.penup()
+        new_turtle.goto(position)
+        self.snake.append(new_turtle)
+
+    def extend(self):
+        self.add_segment(self.snake[-1].position())
 
     def move(self):
         # for square in snake: # Not working when turning
